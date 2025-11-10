@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Smartbook - AudioBook</title>
+  <link rel="stylesheet" href="plyr.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="ID-0-101-Couverture.jpg" alt="Couverture" style="width: 20%; height: auto; margin-bottom: 20px;">
+
+  <div class="logos">
+    <img src="PLANCHE-1a.jpg" alt="Logo AudioBook" style="width: 5%; height: auto; margin-bottom: 20px;">
+    <img src="Logo_resized.jpg" alt="Logo Encyclo-AI" style="width: 10%; height: auto; margin-bottom: 20px;">
+  </div>
+
+<!-- Bloc bouton Play + potentiomètre vitesse -->
+<div class="player-controls">
+  <!-- Gros bouton Play -->
+  <button id="bigPlayBtn" aria-label="Lire ou mettre en pause le livre audio">▶</button>
+
+  <!-- Bloc vitesse -->
+  <div id="speedControl">
+    <div class="speed-label">Vitesse</div>
+    <div class="speed-knob-wrapper">
+      <input type="range" id="speedKnob" min="0.9" max="1.1" step="0.05" value="1" orient="vertical">
+
+      <!-- Colonne repères alignés -->
+      <div id="speedLabels">
+        <span>++</span>
+        <span>+</span>
+        <span>=</span>
+        <span>-</span>
+        <span>--</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Lecteur audio -->
+  <audio id="audioPlayer" controls></audio>
+
+  <!-- Playlist -->
+  <ul id="playlist">
+    <li><a href="Introduction.mp3" style="font-weight: bold;">INTRODUCTION - LES MYSTÈRES DES MARÉES : UNE EXPLORATION COSMIQUE</a></li>
+
+    <li style="font-weight: bold;">Chapitre 1 - INTRODUCTION AUX MARÉES ET À LEUR ORIGINE COSMIQUE</li>
+    <ul>
+      <li><a href="Chapitre1-1.mp3">1.1 - Les bases des marées</a></li>
+      <li><a href="Chapitre1-2.mp3">1.2 - L'histoire de la compréhension des marées</a></li>
+      <li><a href="Chapitre1-3.mp3">1.3 - Les cycles de marée</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 2 - INFLUENCE GRAVITATIONNELLE DE LA LUNE SUR LES MARÉES</li>
+    <ul>
+      <li><a href="Chapitre2-1.mp3">2.1 - La gravité lunaire et ses effets</a></li>
+      <li><a href="Chapitre2-2.mp3">2.2 - Les marées lunaires</a></li>
+      <li><a href="Chapitre2-3.mp3">2.3 - L'influence des phases lunaires</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 3 - RÔLE DU SOLEIL DANS LA MODULATION DES MARÉES</li>
+    <ul>
+      <li><a href="Chapitre3-1.mp3">3.1 - L'effet gravitationnel solaire</a></li>
+      <li><a href="Chapitre3-2.mp3">3.2 - Les marées combinées Soleil-Lune</a></li>
+      <li><a href="Chapitre3-3.mp3">3.3 - Les variations saisonnières des marées</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 4 - LES CATÉGORIES DE MARÉES : VIVES-EAUX ET MORTES-EAUX</li>
+    <ul>
+      <li><a href="Chapitre4-1.mp3">4.1 - Définition des vives-eaux</a></li>
+      <li><a href="Chapitre4-2.mp3">4.2 - Définition des mortes-eaux</a></li>
+      <li><a href="Chapitre4-3.mp3">4.3 - Comparaison entre vives-eaux et mortes-eaux</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 5 - IMPACT DES MARÉES SUR LES ÉCOSYSTÈMES CÔTIERS</li>
+    <ul>
+      <li><a href="Chapitre5-1.mp3">5.1 - Les zones intertidales</a></li>
+      <li><a href="Chapitre5-2.mp3">5.2 - Adaptations des espèces marines</a></li>
+      <li><a href="Chapitre5-3.mp3">5.3 - Rôle des marées dans la productivité marine</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 6 - IMPORTANCE HISTORIQUE DES MARÉES POUR LES SOCIÉTÉS CÔTIÈRES</li>
+    <ul>
+      <li><a href="Chapitre6-1.mp3">6.1 - Navigation maritime et marées</a></li>
+      <li><a href="Chapitre6-2.mp3">6.2 - Pêche et marées</a></li>
+      <li><a href="Chapitre6-3.mp3">6.3 - Infrastructure côtière et marées</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 7 - LES DÉFIS CONTEMPORAINS DE LA MONTÉE DES MERS ET DES MARÉES</li>
+    <ul>
+      <li><a href="Chapitre7-1.mp3">7.1 - Impact du changement climatique sur les marées</a></li>
+      <li><a href="Chapitre7-2.mp3">7.2 - Gestion des risques côtiers</a></li>
+      <li><a href="Chapitre7-3.mp3">7.3 - Préservation des écosystèmes face aux marées changeantes</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 8 - ÉNERGIE MARÉMOTRICE : UNE OPPORTUNITÉ RENOUVELABLE</li>
+    <ul>
+      <li><a href="Chapitre8-1.mp3">8.1 - Principe de l'énergie marémotrice</a></li>
+      <li><a href="Chapitre8-2.mp3">8.2 - Avantages et défis de l'énergie marémotrice</a></li>
+      <li><a href="Chapitre8-3.mp3">8.3 - Perspectives futures de l'énergie marémotrice</a></li>
+    </ul>
+
+    <li><a href="Conclusion.mp3" style="font-weight: bold;">CONCLUSION - LES MARÉES : UN REFLET DES FORCES COSMIQUES ET TERRESTRES</a></li>
+  </ul>
+
+  <p><a href="ID-0-101-Annexes.pdf" target="_blank">📄 Consulter les annexes du livre</a></p>
+  <p><a href="mentions_legales.pdf">Mentions légales</a></p>
+
+  <script src="plyr.polyfilled.js"></script>
+  <script src="lecteur.js"></script>
+</body>
+</html>
